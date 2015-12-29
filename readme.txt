@@ -38,15 +38,12 @@ User Redirects provides an easy method of redirecting links, by entering the pre
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Use the User Redirects screen to configure the plugin.
 
+== Screenshots ==
+1. Search for Login Anywhere
 
 == Frequently Asked Question ==
 = Coming soon =
-
 Will be added later
-
-== Screenshots ==
-
-1. Add old and new urls
 
 == Changelog ==
 
