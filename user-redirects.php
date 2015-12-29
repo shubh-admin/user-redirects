@@ -59,9 +59,9 @@ if(!class_exists(User_redirects))
 			echo "<form method='post' action=''>";
 			for ($i=0; $i < count($a); $i++) 
 			{ 
-				echo "<p>Previous Link";
+				echo "<p>Older Url";
 				echo "<input type='url' required name='user_redirects[".$i."][pre_link]' value='".$a[$i]['pre_link']."'>";
-				echo "Next Link";
+				echo "New Url";
 				echo "<input type='url' required name='user_redirects[".$i."][next_link]' value='".$a[$i]['next_link']."'>";
 				echo "<input type='button'  value='add' onclick='add_input(this,".$i.")'>";
 				echo "<input type='button'  value='remove' onclick='remove_input(this)'>";
