@@ -3,9 +3,9 @@
 Plugin Name: User Redirects
 Plugin URI: http://www.shubhcomputing.com
 Description: Create a list of URLs that you would like to 301 redirect to another page or site.
-Version: 1.00
-Author: Shubh COmputing
-Author URI: http://www.shubhcomputing.com/
+Version: 0.1
+Author: Shubh Computing LLP
+Author URI: http://shubhcomputing.com/
 */
 
 if(!class_exists(User_redirects))
