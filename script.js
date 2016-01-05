@@ -1,5 +1,8 @@
 $ = jQuery.noConflict();
+$(window).load(function(){
 
+    $('#links_table').DataTable();
+});
 
 
 function add_input(a,b)

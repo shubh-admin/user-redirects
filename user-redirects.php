@@ -27,6 +27,9 @@ if(!class_exists(User_redirects))
 
 		function my_enqueue()
 		{
+			wp_register_style( 'custom_wp_admin_css', plugin_dir_url( __FILE__ ) .'assets/css/jquery.dataTables.min.css', false, '1.0.0' );
+        	wp_enqueue_style( 'custom_wp_admin_css' );
+			wp_enqueue_script('data_table_script',plugin_dir_url( __FILE__ ) .'assets/js/jquery.dataTables.min.js', array('jquery'),'1.0','true' );
 			wp_enqueue_script( 'my_custom_script', plugin_dir_url( __FILE__ ) . 'script.js', array('jquery'),'1.0','true' );
 		}
 
@@ -69,7 +72,45 @@ if(!class_exists(User_redirects))
 			}
 			echo "<input type='submit' value='Save'>";
 			echo "</form>";
+			?>
+			<table id="links_table" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Prev. Link</th>
+                <th>New Link</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Id</th>
+                <th>Prev. Link</th>
+                <th>New Link</th>
+                <th>Action</th>
+                
+            </tr>
+        </tfoot>
+        <tbody>
+        	<?php for ($i=0; $i < count($a); $i++) { 
+        		?>
+        		 <tr>
+        		 	<td><?php echo $i; ?></td>
+                <td><?php echo $a[$i]['pre_link'] ?></td>
+                <td><?php echo $a[$i]['next_link'] ?></td>
+                <td>Delete</td>
+                
+            </tr>
+
+        		<?php
+        	} ?>
+                   </tbody>
+    </table>
+			<?php
 			echo "</div>";
+
+
 
 		}
 
